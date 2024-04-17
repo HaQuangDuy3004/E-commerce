@@ -14,8 +14,10 @@ export default function HomeScreen() {
 
     //used to get slider for home screen 
     const getSliders=async() => {
+        setSliderList([])
     const querySnapshot = await getDocs(collection(db, "sliders"));
     querySnapshot.forEach((doc) => {
+        //doc.data() is never undefined for query doc snapshots
     setSliderList(sliderList=>[...sliderList,doc.data()])
     });
     }
