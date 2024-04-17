@@ -45,6 +45,8 @@ export default function Header() {
     )
 }
 
+//Quang duy thay đổi nè
+
 const styles = StyleSheet.create({
     header: {
         gap: 8,
