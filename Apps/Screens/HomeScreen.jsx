@@ -7,7 +7,7 @@ import { app } from '../../firebaseConfig'
 
 export default function HomeScreen() {
     const db = getFirestore(app);
-    //const [sliderList, setSliderList] = useState();
+    //const [sliderList, setSliderList] = useState([]);
     // useEffect(() => {
     //      getSliders();
     // },[])
