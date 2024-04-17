@@ -1,14 +1,29 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Header from '../../components/HomeScreen/Header'
-
+import Slider from '../../components/HomeScreen/Slider'
+import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { app } from '../../firebaseConfig'
 
 export default function HomeScreen() {
+    const db = getFirestore(app);
+    //const [sliderList, setSliderList] = useState();
+    // useEffect(() => {
+    //      getSliders();
+    // },[])
+
+    //used to get slider for home screen 
+    const getSliders=async() => {
+    const querySnapshot = await getDocs(collection(db, "sliders"));
+    querySnapshot.forEach((doc) => {
+    setSliderList(sliderList=>[...sliderList,doc.data()])
+    });
+    }
     return (
         <View className="py-8 px-6 bg-white flex-1">
             <Header />
-
-            
+            {/* slider */}
+            <Slider />
         </View>
     )
 }
