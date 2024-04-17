@@ -7,6 +7,8 @@ export default function HomeScreen() {
     return (
         <View className="py-8 px-6 bg-white flex-1">
             <Header />
+
+            
         </View>
     )
 }
