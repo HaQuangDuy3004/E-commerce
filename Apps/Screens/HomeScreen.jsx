@@ -34,3 +34,5 @@ export default function HomeScreen() {
 //Sửa nhưng ko muốn đẩy lên web 2 test push
 
 //Hà Quydn gduy
+
+//2:13:54 qua phaanf category list ( home screen )
