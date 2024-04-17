@@ -13,3 +13,5 @@ export default function HomeScreen() {
         </View>
     )
 }
+
+//Sửa nhưng ko muốn đẩy lên web
