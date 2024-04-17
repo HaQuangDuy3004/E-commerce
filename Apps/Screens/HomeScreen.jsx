@@ -5,7 +5,7 @@ import Header from '../../components/HomeScreen/Header'
 
 export default function HomeScreen() {
     return (
-        <View className="p-8 bg-blue-400" style={{ padding: 8 }}>
+        <View className="py-8 px-6 bg-white flex-1">
             <Header />
         </View>
     )
