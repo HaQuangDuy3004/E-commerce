@@ -31,6 +31,7 @@ export default function App() {
     //</ClerkProvider>
   );
 }
+//Commit 3
 
 // const styles = StyleSheet.create({
 //   container: {
