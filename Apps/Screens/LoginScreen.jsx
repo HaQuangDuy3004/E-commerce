@@ -3,7 +3,6 @@ import React from 'react'
 import * as WebBrowser from "expo-web-browser";
 import { useWarmUpBrowser } from '../../hooks/useWarmUpBrowser';
 import { useOAuth } from '@clerk/clerk-expo';
-import SignUpScreen from '../../components/SignUpScreen';
 import { useNavigation } from '@react-navigation/native';
 // WebBrowser.maybeCompleteAuthSession();
 export default function LoginScreen(props) {

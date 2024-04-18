@@ -15,7 +15,7 @@ export default function Header() {
             {/* User Info Section */}
             <View style={styles.header}>
                 <Image
-                    source={require('./../../assets/Image/image-placeholder-icon-5.jpg')}
+                    source={require('./../../../assets/Image/image-placeholder-icon-5.jpg')}
                     style={{ width: 48, height: 48, borderRadius: 100 }}
                 />
                 {/* 1:57:24
