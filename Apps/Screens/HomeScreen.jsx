@@ -13,6 +13,7 @@ export default function HomeScreen() {
 
     useEffect(() => {
         getSliders();
+        getCategoryList();
     }, [])
 
     //used to get slider for home screen 
@@ -36,13 +37,13 @@ export default function HomeScreen() {
     }
 
     return (
-        <View className="py-8 px-6 bg-white flex-1">
+        <View className="py-8 px-6 bg-white flex-1 ">
             <Header />
             {/* slider */}
             <Slider sliderList={sliderList} />
 
             {/* Category List */}
-            <Categories />
+            <Categories categoryList={categoryList} />
 
         </View>
     )

@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     inputSearch: {
         gap: 8,
-        padding: 12,
+        padding: 8,
         marginTop: 21,
         borderWidth: 2,
         paddingLeft: 20,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        borderColor: '#3b82f6',
-        backgroundColor: 'white',
+        borderColor: '#bfdbfe',
+        backgroundColor: '#eff6ff',
     }
 })
