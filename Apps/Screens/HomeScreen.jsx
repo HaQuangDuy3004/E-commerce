@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView } from 'react-native'
+import { View, Text, Image, ScrollView, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import Header from '../Components/HomeScreen/Header'
 import Slider from '../Components/HomeScreen/Slider'
@@ -51,22 +51,22 @@ export default function HomeScreen() {
     // }
 
     return (
-        <ScrollView className="py-8 px-6 bg-white flex-1 ">
-            <Header />
-            {/* slider */}
-            {/* <Slider sliderList={sliderList} />  Sử dụng firebase */}
-            <Slider />
+        <View className="py-8 px-5 bg-white flex-1 ">
+            <FlatList
+                ListHeaderComponent={
+                    <>
+                        <Header />
+                        <Slider />
+                        <Categories />
+                        <LatestItemList />
 
-            {/* Category List */}
-            {/* <Categories categoryList={categoryList} /> Sử dụng firebase */}
-            <Categories />
+                    </>
+                }
+                showsHorizontalScrollIndicator={false} //2:13:26
+                showsVerticalScrollIndicator={false}
 
-
-            {/* LastItem List */}
-            {/* <LatestItemList latestItemList={latestItemList} /> */}
-            <LatestItemList />
-
-        </ScrollView>
+            />
+        </View>
     )
 }
 
