@@ -6,13 +6,14 @@ import ExploreScreen from '../Screens/ExploreScreen';
 import AddPostScreen from '../Screens/AddPostScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
 import { Ionicons } from '@expo/vector-icons';
+import HomeScreenStackNav from './HomeScreenStackNav';
 
 const Tab = createBottomTabNavigator();
 
 export default function Tabnavigation() {
     return (
         <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor: '#000' }}>
-            <Tab.Screen name="Home" component={HomeScreen}
+            <Tab.Screen name="home-nav" component={HomeScreenStackNav}
                 options={{
                     tabBarLabel: ({ color }) => (
                         <Text style={{ color: color, fontSize: 12, marginBottom: 3 }}>Home</Text>

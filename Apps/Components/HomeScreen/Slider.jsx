@@ -1,15 +1,18 @@
 import { FlatList } from 'react-native-gesture-handler'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
+import Sliders from '../../../Data/Sliders'
 
 //2:08:58
 export default function Slider({ sliderList }) {
+
     return (
         <View style={styles.slider}>
             <FlatList
-                data={sliderList}
+                data={Sliders}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false} //2:13:26
+
                 renderItem={({ item, index }) => (
                     <View>
                         {/* Đã fix hiển thị ảnh */}
