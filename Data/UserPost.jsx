@@ -83,5 +83,3 @@ const UserPost = [
 ];
 
 export default UserPost;
-
-id, address, category, createdAt, description, images, price, title
