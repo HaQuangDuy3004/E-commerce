@@ -2,7 +2,7 @@ import { View, Text, FlatList, TouchableOpacity, Image, SafeAreaView } from 'rea
 import React from 'react'
 import UserPost from '../../../Data/UserPost'
 
-export default function LatestItemList({ }) {
+export default function LatestItemList({ latestItemList }) {
 
     return (
         <SafeAreaView style={{ marginTop: 12, marginBottom: 40 }}>
@@ -17,7 +17,7 @@ export default function LatestItemList({ }) {
                 }
                 key={'#'}
                 numColumns={2}
-                data={UserPost}
+                data={latestItemList}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity style={{ flex: 1, margin: 6, padding: 8, borderRadius: 8, borderWidth: 1, borderColor: '#e2e8f0' }}>
                         <Image source={{ uri: item.image }}

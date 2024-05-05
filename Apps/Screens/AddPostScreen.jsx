@@ -62,7 +62,7 @@ export default function AddPostScreen() {
             quality: 1,
         });
 
-        console.log(result);
+        // console.log(result);
 
         if (!result.canceled) {
             setImage(result.assets[0].uri);
@@ -73,7 +73,7 @@ export default function AddPostScreen() {
         //Loading
         setLoading(true);
 
-        console.log(value);
+        // console.log(value);
         //Convert Uri to Blob File
         const resp = await fetch(image);
         const blob = await resp.blob();
@@ -83,11 +83,11 @@ export default function AddPostScreen() {
 
         uploadBytes(storageRef, blob)
             .then((snapshot) => {
-                console.log('Uploaded a blob or file!');
+                // console.log('Uploaded a blob or file!');
             })
             .then((resp) => {
                 getDownloadURL(storageRef).then(async (downloadUrl) => {
-                    console.log(downloadUrl);
+                    // console.log(downloadUrl);
                     value.image = downloadUrl;
                     // value.userName = user.fullName;
                     // value.userEmail = user.primaryEmailAddress.emailAddress;

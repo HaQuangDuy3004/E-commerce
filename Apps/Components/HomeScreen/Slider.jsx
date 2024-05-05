@@ -9,7 +9,7 @@ export default function Slider({ sliderList }) {
     return (
         <View style={styles.slider}>
             <FlatList
-                data={Sliders}
+                data={sliderList}
                 horizontal={true}
                 showsHorizontalScrollIndicator={false} //2:13:26
 

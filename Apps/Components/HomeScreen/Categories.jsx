@@ -13,7 +13,7 @@ export default function Categories({ categoryList }) {
             <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Categories</Text>
             <FlatList
                 key={'#'}
-                data={Category}
+                data={categoryList}
                 numColumns={4}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity
