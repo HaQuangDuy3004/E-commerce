@@ -6,7 +6,7 @@ import { Firestore, collection, getDocs, getFirestore } from 'firebase/firestore
 import { app } from '../../firebaseConfig'
 import Categories from '../Components/HomeScreen/Categories'
 import LatestItemList from '../Components/HomeScreen/LatestItemList'
-
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export default function HomeScreen() {
     const db = getFirestore(app);
@@ -58,6 +58,12 @@ export default function HomeScreen() {
                         <Header />
                         <Slider sliderList={sliderList} />
                         <Categories categoryList={categoryList} />
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10 }}>
+                            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Latest Items</Text>
+                            <TouchableOpacity>
+                                <Text style={{ color: '#3b82f6', fontSize: 15 }}>View All</Text>
+                            </TouchableOpacity>
+                        </View>
                         <LatestItemList latestItemList={latestItemList} />
 
                     </>

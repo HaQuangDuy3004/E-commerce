@@ -7,6 +7,7 @@ import AddPostScreen from '../Screens/AddPostScreen';
 import ProfileScreen from '../Screens/ProfileScreen';
 import { Ionicons } from '@expo/vector-icons';
 import HomeScreenStackNav from './HomeScreenStackNav';
+import ExploreScreenStackNav from './ExploreScreenStackNav';
 
 const Tab = createBottomTabNavigator();
 

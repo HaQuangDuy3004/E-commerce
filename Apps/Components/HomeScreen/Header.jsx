@@ -24,7 +24,7 @@ export default function Header() {
             /> */}
                 <View>
                     <Text style={{ fontSize: 16 }} >Welcome</Text>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Hà Quang Duy</Text>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Admin</Text>
                     {/* 1:58:45 */}
                     {/* {user?.fullName} */}
                 </View>

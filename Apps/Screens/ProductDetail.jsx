@@ -1,7 +1,9 @@
-import { View, Text, SafeAreaView, FlatList, TouchableOpacity, Image } from 'react-native'
+import { View, Text, SafeAreaView, FlatList, TouchableOpacity, Image, Share } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import UserPost from '../../Data/UserPost';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons';
+
 
 export default function ProductDetail() {
     const [product, SetProduct] = useState([]);
@@ -10,7 +12,10 @@ export default function ProductDetail() {
     useEffect(() => {
         // console.log(params)
         params && SetProduct(params.product);
+
+
     }, [params])
+
     return (
         <View>
             <Image source={{ uri: product.image }}

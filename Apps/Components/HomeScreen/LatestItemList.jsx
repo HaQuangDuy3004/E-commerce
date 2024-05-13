@@ -8,12 +8,7 @@ export default function LatestItemList({ latestItemList }) {
         <SafeAreaView style={{ marginTop: 12, marginBottom: 40 }}>
             <FlatList
                 ListHeaderComponent={
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10 }}>
-                        <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Latest Items</Text>
-                        <TouchableOpacity>
-                            <Text style={{ color: '#3b82f6', fontSize: 15 }}>View All</Text>
-                        </TouchableOpacity>
-                    </View>
+                    <></>
                 }
                 key={'#'}
                 numColumns={2}

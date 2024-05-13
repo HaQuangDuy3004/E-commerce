@@ -12,9 +12,9 @@ export default function Categories({ categoryList }) {
         <View style={{ marginTop: 12 }}>
             <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Categories</Text>
             <FlatList
-                key={'#'}
+                key={'a'}
                 data={categoryList}
-                numColumns={4}
+                numColumns={3}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity
                         onPress={() => navigation.navigate('ItemList', { category: item.name })}
