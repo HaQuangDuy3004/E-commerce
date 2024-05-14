@@ -5,7 +5,8 @@ import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native';
 import MainScreen from './Apps/Screens/MainScreen';
-
+import store from './Apps/Redux/store';
+// import { Provider } from 'react-redux'
 
 const Stack = createStackNavigator();
 function HomeStack() {
@@ -20,14 +21,9 @@ function HomeStack() {
 
 export default function App() {
   return (
-    //<ClerkProvider publishableKey={'pk_test_ZGVmaW5pdGUtYW50ZWF0ZXItNTguY2xlcmsuYWNjb3VudHMuZGV2JA'}>
-    // <View className="flex-1 bg-white">
-    //   <StatusBar style="auto" />
     <NavigationContainer>
       <HomeStack />
     </NavigationContainer>
-    //</View>
-    //</ClerkProvider>
   );
 }
 

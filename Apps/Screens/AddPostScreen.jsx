@@ -30,7 +30,6 @@ export default function AddPostScreen() {
 
     //Upload Image to Firebase Storage
     const storage = getStorage();
-    //const { user } = useUser();
 
     //Loading
     const [loading, setLoading] = useState(false);
@@ -44,25 +43,30 @@ export default function AddPostScreen() {
     }, [])
 
     const getCategoryList = async () => {
+        // Đặt lại danh sách danh mục thành mảng rỗng trước khi tải dữ liệu mới
         setCategoryList([]);
+        // Lấy tất cả các tài liệu (documents) từ bộ sưu tập 'Category'
         const querySnapshot = await getDocs(collection(db, 'Category'));
+        // Duyệt qua từng tài liệu trong querySnapshot
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
-            //console.log(" => ", doc.data());
+            // Thêm dữ liệu của tài liệu vào danh sách danh mục
             setCategoryList(categoryList => [...categoryList, doc.data()])
         })
     }
     // Use to pick image from gallery
     const pickImage = async () => {
-        // No permissions request is necessary for launching the image library
+        // Hàm này mở thư viện hình ảnh trên thiết bị của người dùng. Nó trả về một Promise,
+        //vì vậy chúng ta sử dụng từ khóa await để chờ cho đến khi người dùng chọn xong hình ảnh.
         let result = await ImagePicker.launchImageLibraryAsync({
+            //cho phép người dùng chọn tất cả các loại media
             mediaTypes: ImagePicker.MediaTypeOptions.All,
+            //cho phép người dùng chỉnh sửa hình ảnh trước khi chọn
             allowsEditing: true,
+            //tỉ lệ khung hình
             aspect: [4, 4],
+            //chất lượng hình ảnh
             quality: 1,
         });
-
-        // console.log(result);
 
         if (!result.canceled) {
             setImage(result.assets[0].uri);
@@ -87,11 +91,7 @@ export default function AddPostScreen() {
             })
             .then((resp) => {
                 getDownloadURL(storageRef).then(async (downloadUrl) => {
-                    // console.log(downloadUrl);
                     value.image = downloadUrl;
-                    // value.userName = user.fullName;
-                    // value.userEmail = user.primaryEmailAddress.emailAddress;
-                    // value.userImage = user.imageUrl;
 
                     const docRef = await addDoc(collection(db, "UserPost"), value)
                     if (docRef.id) {
@@ -121,21 +121,8 @@ export default function AddPostScreen() {
                         price: '',
                         image: '',
                         createdAt: (formattedDate),
-                        // userName: '',
-                        // userEmail: '',
-                        // userImage: ''
                     }}
                     onSubmit={value => onSubmitMethod(value)}
-                // validate={(values) => {
-                //     const errors = {}
-                //     if (!values.title) {
-                //         alert("Title is required")
-                //         console.log("Title is required")
-
-                //         errors.title = 'Title must be there'
-                //     }
-                //     return errors
-                // }}
                 >
                     {({
                         handleChange,
@@ -214,13 +201,7 @@ export default function AddPostScreen() {
 
                                 }
                             </TouchableOpacity>
-                            {/* <Button onPress={handleSubmit}
-                                    title="submit"
-                                    className="mt-7"
-                                /> */}
                         </View>
-
-
                     )}
                 </Formik>
             </ScrollView>

@@ -30,7 +30,7 @@ export default function Tabnavigation() {
                         <Text style={{ color: color, fontSize: 12, marginBottom: 3 }}>Explore</Text>
                     ),
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="search" size={size} color={color} />
+                        <Ionicons name="albums" size={size} color="black" />
                     )
                 }} />
             <Tab.Screen name="AddPost" component={AddPostScreen}
