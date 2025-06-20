@@ -21,7 +21,6 @@
 - `Apps/Store/`, `Apps/Redux/`: (Dự phòng) Quản lý state với Redux
 - `Data/`: Dữ liệu mẫu cho Category, Sliders, UserPost
 - `assets/`: Hình ảnh, icon, splash screen
-- `firebaseConfig.jsx`: Cấu hình Firebase
 
 ## ⚙️ Cài đặt
 
