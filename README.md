@@ -23,11 +23,11 @@
 - `assets/`: Hình ảnh, icon, splash screen
 - `firebaseConfig.jsx`: Cấu hình Firebase
 
-## Cài đặt
+## ⚙️ Cài đặt
 
 1. **Clone project**
     ```sh
-    git clone <repo-url>
+    git clone https://github.com/HaQuangDuy3004/E-commerce
     cd E-commerce-main
     ```
 
@@ -42,7 +42,7 @@
     ```
     hoặc dùng Expo Go để quét QR code.
 
-## Công nghệ sử dụng
+## 🛠️ Công nghệ sử dụng
 
 - [React Native](https://reactnative.dev/)
 - [Expo](https://expo.dev/)
@@ -51,7 +51,7 @@
 - [Formik](https://formik.org/) (quản lý form)
 - [React Navigation](https://reactnavigation.org/)
 
-## Hướng dẫn sử dụng
+## 📱 Hướng dẫn sử dụng
 
 - Đăng nhập (mặc định là Admin demo)
 - Xem các sản phẩm mới nhất trên trang chủ
@@ -60,11 +60,11 @@
 - Vào tab "Add Post" để đăng bán sản phẩm mới (có thể chọn ảnh từ thư viện)
 - Vào tab "Profile" để xem thông tin tài khoản
 
-## Đóng góp
+## 🤝 Đóng góp
 
 Mọi đóng góp vui lòng tạo pull request hoặc issue mới.
 
-## License
+## 📄 License
 
 MIT
 
