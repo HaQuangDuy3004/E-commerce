@@ -22,6 +22,9 @@
 - `Data/`: Dữ liệu mẫu cho Category, Sliders, UserPost
 - `assets/`: Hình ảnh, icon, splash screen
 
+## 🎥 Demo
+
+
 ## ⚙️ Cài đặt
 
 1. **Clone project**
