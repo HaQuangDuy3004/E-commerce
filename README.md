@@ -23,28 +23,51 @@
 - `assets/`: Hình ảnh, icon, splash screen
 - `firebaseConfig.jsx`: Cấu hình Firebase
 
-## 🛠️ Công nghệ sử dụng
+## Cài đặt
 
-- [ReactNative]
-- []
+1. **Clone project**
+    ```sh
+    git clone <repo-url>
+    cd E-commerce-main
+    ```
 
-## 📦 Cài đặt
+2. **Cài đặt dependencies**
+    ```sh
+    npm install
+    ```
 
-### 1. Clone repository
-```
-git clone https://github.com/HaQuangDuy3004/todo_app
-cd todo_app
-```
-### 2. Cài đặt dependencies
-``
-flutter pub get
-``
-### 3. Chạy ứng dụng
-``
-flutter run
-``
+3. **Chạy ứng dụng**
+    ```sh
+    npm start
+    ```
+    hoặc dùng Expo Go để quét QR code.
 
-## 🖼️ Ảnh minh họa
-<div align="center">
-  <img src="assets/images/screenshot_home_todo.png" alt="Logo dự án" width="400" >
-</div>
+## Công nghệ sử dụng
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [Firebase (Firestore, Storage)](https://firebase.google.com/)
+- [NativeWind (Tailwind CSS)](https://www.nativewind.dev/)
+- [Formik](https://formik.org/) (quản lý form)
+- [React Navigation](https://reactnavigation.org/)
+
+## Hướng dẫn sử dụng
+
+- Đăng nhập (mặc định là Admin demo)
+- Xem các sản phẩm mới nhất trên trang chủ
+- Chọn danh mục để lọc sản phẩm
+- Nhấn vào sản phẩm để xem chi tiết
+- Vào tab "Add Post" để đăng bán sản phẩm mới (có thể chọn ảnh từ thư viện)
+- Vào tab "Profile" để xem thông tin tài khoản
+
+## Đóng góp
+
+Mọi đóng góp vui lòng tạo pull request hoặc issue mới.
+
+## License
+
+MIT
+
+---
+
+> Project by GroupSix
